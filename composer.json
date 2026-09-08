@@ -2,21 +2,32 @@
     "name": "jeffersongoncalves/laravel-resend",
     "description": "Laravel wrapper for the Resend email API",
     "keywords": [
+        "jeffersongoncalves",
         "laravel",
-        "laravel-resend"
+        "laravel-resend",
+        "resend",
+        "api",
+        "client",
+        "email",
+        "transactional",
+        "broadcasts",
+        "audiences"
     ],
     "homepage": "https://github.com/jeffersongoncalves/laravel-resend",
     "license": "MIT",
+    "type": "library",
     "authors": [
         {
-            "name": "Jefferson Simão Gonçalves",
-            "email": "gerson.simao.92@gmail.com"
+            "name": "Jefferson Gonçalves",
+            "email": "gerson.simao.92@gmail.com",
+            "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.2",
-        "spatie/laravel-package-tools": "^1.16",
-        "illuminate/contracts": "^12.0|^13.0"
+        "illuminate/http": "^12.0|^13.0",
+        "illuminate/support": "^12.0|^13.0",
+        "spatie/laravel-package-tools": "^1.16"
     },
     "require-dev": {
         "larastan/larastan": "^3.0",
@@ -27,12 +38,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Jeffersongoncalves\\Resend\\": "src/"
+            "JeffersonGoncalves\\Resend\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Jeffersongoncalves\\Resend\\Tests\\": "tests/"
+            "JeffersonGoncalves\\Resend\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -52,10 +63,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jeffersongoncalves\\Resend\\ResendServiceProvider"
+                "JeffersonGoncalves\\Resend\\ResendServiceProvider"
             ],
             "aliases": {
-                "Resend": "Jeffersongoncalves\\Resend\\Facades\\Resend"
+                "Resend": "JeffersonGoncalves\\Resend\\Facades\\Resend"
             }
         }
     },

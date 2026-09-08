@@ -1,8 +1,8 @@
 <?php
 
-namespace Jeffersongoncalves\Resend\Tests;
+namespace JeffersonGoncalves\Resend\Tests;
 
-use Jeffersongoncalves\Resend\ResendServiceProvider;
+use JeffersonGoncalves\Resend\ResendServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 class TestCase extends Orchestra
@@ -12,5 +12,10 @@ class TestCase extends Orchestra
         return [
             ResendServiceProvider::class,
         ];
+    }
+
+    protected function getEnvironmentSetUp($app): void
+    {
+        $app['config']->set('resend.api_key', 're_test_key');
     }
 }
